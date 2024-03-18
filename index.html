@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>Создать Баззу Данных у нас просто.</p>
+        <button class="btn btn-warning">Создать таблицу</button>
+
+        {% for el in values %}
+            {% if el == 'Hello' %}
+                <p>{{ el }}</p>
+            {% endif %}
+        {% endfor %}
+
+        {% for el in obj %}
+            <p>{{ el }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
